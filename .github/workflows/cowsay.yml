@@ -1,11 +1,12 @@
 name: Cowsay-Draw
 
-on: 
-  push
-    branches:
-      - "main"
-    paths:
-      - '.github/workflows/cowsay.yml'
+on:
+    push:
+        branches:
+            - "main"
+        paths:
+            - ".github/workflows/cowsay.yml"
+    workflow_dispatch:
 
 jobs:
     cowsay-draw:

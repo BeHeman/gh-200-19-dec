@@ -10,11 +10,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run a one-line script
-        run: echo "Hello, Github Class for GH-200!"
+      - name: Run a multi-line cmds
+        run: |
+          echo "Hello, Github Class for GH-200!"
+          ls -ltra
+          cat README.md
 
-      - name: List files
-        run: ls -la
+      #- name: List files
+      #  run: ls -la
 
-      - name: Read file
-        run: cat README.md
+      #- name: Read file
+      #  run: cat README.md

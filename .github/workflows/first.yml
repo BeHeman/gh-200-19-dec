@@ -1,6 +1,11 @@
 name: First Workflow
 
-on: push
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/first.yml"
 
 jobs:
   firstjob:

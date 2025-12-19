@@ -19,4 +19,6 @@ jobs:
               run: ls -ltra
 
             - name: Run Shell Script
-              run: ./myscript.sh
+              run: |
+                  chmod +x myscript.sh
+                  ./myscript.sh

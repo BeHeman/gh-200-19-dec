@@ -1,0 +1,20 @@
+name: First Workflow
+
+on: push
+
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+
+    steps:
+      #- name: Checkout repository
+      #  uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo "Hello, Github Class for GH-200!"
+
+      - name: List files
+        run: ls -la
+
+      - name: Read file
+        run: cat README.md

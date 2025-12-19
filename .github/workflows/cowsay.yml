@@ -1,0 +1,22 @@
+name: Cowsay-Draw
+
+on: push
+
+jobs:
+    cowsay-draw:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v6
+
+            - name: Install Cowsay
+              run: sudo apt-get install -y cowsay
+
+            - name: Run COwsay cmd
+              run: cowsay -f dragon "This is a dragon saying hello!" >> dragon.txt
+
+            - name: check file
+              run: grep -i "dragon" dragon.txt
+
+            - name: Read file
+              run: cat dragon.txt
